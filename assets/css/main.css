@@ -219,8 +219,19 @@ body {
 }
 
 
+.section-call-to-area-home {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    min-height: 1px;
+}
+.section-call-to-area-home .row {
+    position: relative;
+}
+
 .section-call-to-area {
-    animation: not-background 90s linear infinite;
     display: block;
     width: 100%;
     position: absolute;
