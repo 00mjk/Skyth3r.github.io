@@ -220,6 +220,7 @@ body {
 
 
 .section-call-to-area {
+    animation: not-background 90s linear infinite;
     display: block;
     width: 100%;
     position: absolute;
@@ -514,14 +515,82 @@ header.nav.hide-menu {
 }
 
 
-#home {
+/*#home {
     background: url('../../images/home-bg.jpg') no-repeat fixed center center / cover;
+}*/
+
+#home {
+  animation: theme 21s linear infinite;
 }
 
 #home .sec-overlay {
-    background: rgba(0,0,0, .7);
+/*    background: rgba(0,0,0, 0.6);*/
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+}
+
+#home .sec-overlay:after, #home .sec-overlay:before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100vmax;
+  height: 100vmax;
+  background: rgba(0, 0, 0, 0.05);
+  animation: background 90s linear infinite;
+}
+#home .sec-overlay:after {
+  left: 15vw;
+}
+#home .sec-overlay:before {
+  right: 15vw;
+  animation-delay: -30s;
+  animation-direction: reverse;
+}
+@keyframes theme {
+  0% {
+    background: #74c390;
+  }
+  16% {
+    background: #5dbdb6;
+  }
+  33% {
+    background: #59d4e1;
+  }
+  50% {
+    background: #51bce8;
+  }
+  66% {
+    background: #fa5374;
+  }
+  83% {
+    background: #e46653;
+  }
+  100% {
+    background: #74c390;
+  }
+}
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes not-background {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .home-inner {
@@ -532,6 +601,7 @@ header.nav.hide-menu {
 }
 
 .home-content {
+  animation: not-background 90s linear infinite;
   color: #fff;
   display: table-cell;
   vertical-align: middle;
